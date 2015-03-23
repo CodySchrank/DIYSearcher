@@ -1,0 +1,22 @@
+header h2, a {
+	display: inline-block;
+	margin: 0px;
+}
+
+header {
+	border-bottom: 1px solid black;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+header h2 {
+	font-size: 32px;
+}
+
+header a {
+	margin-left: 30px;
+	font-size: 18px;
+	font-weight: lighter;
+	text-decoration: none;
+	color: black;
+}
