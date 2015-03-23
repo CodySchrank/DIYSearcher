@@ -9,7 +9,7 @@ class DIYS extends CI_Controller {
 	}
 
 	public function index() {
-		$this->view->load('index');
+		$this->load->view('index');
 	}
 
 	public function browse() {
