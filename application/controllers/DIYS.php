@@ -12,7 +12,8 @@ class DIYS extends CI_Controller {
 		$this->load->view('index');
 	}
 
-	public function browse() {
+	public function browse() 
+	{
 		$this->load->view('browse');
 	}
 }

@@ -1,0 +1,12 @@
+.result-tile {
+	padding: auto 0;
+	background-color: red;
+	height: 25%;
+}
+
+.result-tile-img {
+	width: 25%;
+	height: 25%;
+	margin: auto 0;
+	padding: auto 0;
+}
