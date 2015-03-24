@@ -47,5 +47,6 @@
 	</div>
 </div>
 </div>
+<? require('partials/footer.php') ?>
 </body>
 </html>

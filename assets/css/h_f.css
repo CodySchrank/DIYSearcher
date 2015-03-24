@@ -79,3 +79,27 @@ header div{
 	float: right;
 	margin-top: 5px;
 }
+
+/* --------------------- FOOTER --------------------- */
+
+footer {
+	height: 40px;
+	margin-top: 30px;
+	background: black;
+	padding-top: 10px;
+	text-align: center;
+}
+
+footer ul {
+	display: inline-block;
+}
+
+footer ul li {
+	display: inline-block;
+	margin: 0 30px;
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: white;
+}
