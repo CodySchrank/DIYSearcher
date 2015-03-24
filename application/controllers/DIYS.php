@@ -16,6 +16,11 @@ class DIYS extends CI_Controller {
 	{
 		$this->load->view('browse');
 	}
+
+	public function project() 
+	{
+		$this->load->view('project');
+	}
 }
 
 //end of main controller
