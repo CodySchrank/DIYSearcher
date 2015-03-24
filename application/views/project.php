@@ -2,7 +2,6 @@
 <html>
 <head>
 	<?php require("partials/head.php") ?>
-	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/assets/css/project.css">
 </head>
 <body>
@@ -32,11 +31,19 @@
 			<span >Overall Rating:</span> <span class="bold">10/10</span>
 		</div>
 		<div class="row">
-			<div class="six columns video">
-				<embed src="http://www.youtube.com/v/fqQz_CBQKhw" type="application/x-shockwave-flash"wmode="transparent">
+			<div class="six columns">
+				<embed class="video" src="http://www.youtube.com/v/fqQz_CBQKhw" type="application/x-shockwave-flash" wmode="transparent">
 			</div>
 			<div class="six columns">
-				
+				<h3>Buy A VHS video toaster kit</h3>
+				<ul class="kit-items">
+					<li>Old VCR</li>
+					<li>Cords</li>
+					<li>dust</li>
+					<li>candy</li>
+				</ul>
+
+			</div>
 		</div>
 
 	</div>
