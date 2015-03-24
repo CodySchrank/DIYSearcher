@@ -15,13 +15,14 @@
 		<a href="/browse" id="browse-projects"></a>
 		<p>Browse Projects</p>
 	</div>
-	<div class="two columns">
-		Or
-	</div>
+	<div class="two columns"><p id="arrow-icon"></p></div>
 	<div class="five columns">
 		<a id="find-projects"></a>
 		<p>Find Projects</p>
 	</div>
+</div>
+<div class="row popular">
+	<h3>Popular DIY Projects</h3>
 </div>
 </div>
 </body>

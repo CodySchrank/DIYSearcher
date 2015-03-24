@@ -3,6 +3,10 @@
 	src: url('fonts/glyphicons-halflings-regular.ttf');
 }
 
+* {
+	font-family: Lato;
+}
+
 header h2, header a, header form {
 	display: inline-block;
 	margin: 0px;

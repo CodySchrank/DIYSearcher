@@ -20,8 +20,8 @@
 }
 
 .container .two.columns {
-	margin: 0% 2%;
-	margin-top: 60px;
+	width: 15%;
+	margin: 50px 2%;
 }
 
 .container .five.columns p {
@@ -44,4 +44,23 @@
 #find-projects:before{
 	font-size: 32px;
 	content:"\e032"
+}
+
+#arrow-icon {
+	font-family: "glyphicons";
+	opacity: .5;
+}
+
+#arrow-icon:before {
+	font-size: 32px;
+	content:"\e120"
+}
+
+.popular {
+	margin-top: 30px;
+}
+
+.popular h3 {
+	text-align: left;
+	font-size: 24px;
 }
