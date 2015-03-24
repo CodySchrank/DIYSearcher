@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DIY SEARCHER</title>
-	<link rel="stylesheet" type="text/css" href="/assets/skeleton/normalize.css">
-	<link rel="stylesheet" type="text/css" href="/assets/skeleton/skeleton.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+<? require('partials/head.php') ?>
 </head>
 <body>
-<div class="container">
 	<? require('partials/header.php') ?>
+<div class="container">
 </div>
 </body>
 </html>
