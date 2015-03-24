@@ -7,6 +7,10 @@
 	font-family: Lato;
 }
 
+header * {
+	color: white;
+}
+
 header h2, header a, header form {
 	display: inline-block;
 	margin: 0px;
@@ -15,6 +19,8 @@ header h2, header a, header form {
 header {
 	border-bottom: 1px solid black;
 	padding: 5px 5%;
+	background: black;
+	opacity: .9;
 }
 
 header h2 {
@@ -27,7 +33,6 @@ header a {
 	font-size: 18px;
 	font-weight: lighter;
 	text-decoration: none;
-	color: black;
 }
 
 header #search {
@@ -61,6 +66,7 @@ header #profile:before {
 
 header input {
 	margin-bottom: 0px;
+	color: black;
 	visibility: hidden;
 }
 

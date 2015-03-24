@@ -3,20 +3,50 @@
 	src: url('fonts/glyphicons-halflings-regular.ttf');
 }
 
+#background {
+	width: 100%;
+	height: auto;
+	max-height: 600px;
+	position: absolute;
+	color: white;
+	background-color: black;
+	opacity: .9;
+}
+
+body {
+	background: #eee;
+	color: white; 
+}
 .container .row {
 	text-align: center;
 }
 
-.container .row:first-of-type{
-	margin-top: 50px;
-	padding-bottom: 20px;
+.search{
+	margin-top: 80px;
+	padding-bottom: 60px;
+	margin-left: -30px;
+	opacity: .9;
+}
+
+.search form input[type='text'] {
+	margin-top: 10px;
+	width: 40%;
+	height: 40px;
+	opacity: .95;
+}
+
+.search form input[type='submit']{
+	border: 1px solid white;
+	color: white;
+	opacity: .95;
 }
 
 .container .five.columns {
 	height: 150px;
-	border: 1px solid black;
+	border: 1px solid white;
 	padding-top: 30px;
 	margin-left: 0px;
+	background-color: rgba(0,0,0,.5);
 }
 
 .container .two.columns {
@@ -57,10 +87,21 @@
 }
 
 .popular {
-	margin-top: 30px;
+	margin-top: 60px;
+	color: black;
+}
+
+.discover {
+	margin-left: 0px;
 }
 
 .popular h3 {
 	text-align: left;
 	font-size: 24px;
+}
+
+.row .four.columns {
+	border: 1px solid white;
+	background-color: rgba(0,0,0,.5);
+	height: 200px;
 }
