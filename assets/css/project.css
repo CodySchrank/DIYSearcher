@@ -1,0 +1,117 @@
+* {
+	font-family: Lato;
+}
+
+/*PROJECT HEADER*/
+.project-picture {
+	height: 210px;
+	background-image: url("/assets/pics/toastvid.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+h1 {
+	color: white;
+	display: inline-block;
+	text-shadow: 0 0 3px rgba(0,0,0,.8);
+	font-size: 5em;
+	margin-top: 12%;
+}
+
+@media screen and (max-width: 875px) {
+    h1 {
+        font-size: 4em;
+        padding-left: 5%;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    h1 {
+        font-size: 2.5em;
+        margin-top: -100px;
+        position: absolute;
+        padding-left: 35%;
+
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        font-size: 2.05em;
+        padding-top: 2.5%;
+        position: absolute;
+        text-align: center;
+        padding-left: 30%;        
+    }
+
+     .creator {
+     	margin-top: 15%;
+    }
+}
+
+
+
+a {
+	text-decoration: none;
+}
+
+.text-background {
+	color: gray;
+	vertical-align: bottom;
+}
+
+.creator {
+	border-radius: 50%;
+	max-height: 100px;
+	max-width: 100px;
+	box-shadow: 0 0 3px rgba(0,0,0,.8);
+	border: 1px white solid;
+}
+
+.author {
+	padding-top: 6%;
+}
+
+h6 a {
+	color: white;
+	text-shadow: 0 0 3px rgba(0,0,0,.8);
+}
+
+h6 a:hover {
+	color: black;
+	text-shadow: 0 0 3px rgba(0,0,0,.8);
+}
+
+
+/*DESCRIPTION*/
+
+.bold {
+	font-weight: bold;
+}
+
+.light-dollar {
+	color: lightgray;
+	padding-right: 3%;
+}
+
+.moderate {
+	padding-right: 3%;
+}
+
+.description {
+	padding-top: 3%;
+}
+
+.ratings {
+	padding-bottom: 2%;
+	border-bottom: gray solid 1px;
+}
+
+/*KIT/VIDEO*/
+
+.video {
+	padding-top: 2%;
+	width: 100%;
+	height: 100%;
+}
