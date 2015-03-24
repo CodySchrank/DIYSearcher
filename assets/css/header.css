@@ -1,12 +1,16 @@
-header h2, a {
+@font-face {
+	font-family: glyphicons;
+	src: url('fonts/glyphicons-halflings-regular.ttf');
+}
+
+header h2, header a, header form {
 	display: inline-block;
 	margin: 0px;
 }
 
 header {
 	border-bottom: 1px solid black;
-	padding: 5px;
-	margin-top: 5px;
+	padding: 5px 8%;
 }
 
 header h2 {
@@ -19,4 +23,42 @@ header a {
 	font-weight: lighter;
 	text-decoration: none;
 	color: black;
+}
+
+header #search {
+	margin-left: 0px;
+	margin-bottom: -5px;
+	font-family: "glyphicons";
+}
+
+header #search:before {
+	content:"\e003";
+}
+
+header #checkout{
+	margin-left: 10px;
+	margin-bottom: -8px;
+	font-family: "glyphicons";
+}
+header #checkout:before{
+	content: "\e116";
+}
+
+header #profile {
+	margin-left: 10px;
+	margin-bottom: -5px;
+	font-family: "glyphicons";
+}
+
+header #profile:before {
+	content:"\e008"
+}
+
+header input {
+	margin-bottom: 0px;
+	visibility: hidden;
+}
+
+header form {
+	margin-left: 80px;
 }
