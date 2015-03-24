@@ -7,7 +7,7 @@
 	<a href="/browse/all">Browse All</a>
 
 	<a href="/browse/new">New Postings</a>
-
+	<div>
 	<form action="/search" method="post">
 		<input type="text" name="search">
 		<a id="search"></a>
@@ -16,5 +16,5 @@
 	<a href="/checkout" id="checkout"></a>
 
 	<a href="/profile" id="profile"></a>
-
+	</div>
 </header>

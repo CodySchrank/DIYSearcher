@@ -62,3 +62,9 @@ header input {
 header form {
 	margin-left: 80px;
 }
+
+header div{
+	display: inline-block;
+	float: right;
+	margin-top: 5px;
+}
