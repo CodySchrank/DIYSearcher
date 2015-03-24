@@ -64,6 +64,44 @@ header #profile:before {
 	content:"\e008"
 }
 
+header ul {
+	position: absolute;
+	visibility: hidden;
+	background: black;
+	float: right;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+
+header button {
+	border: none;
+	padding: 0px;
+	font-size: 18px;
+}
+
+header button:hover {
+	color: #0FA0CE; 
+}
+
+header ul li {
+	color: white;
+	list-style: none;
+	border-bottom: 1px solid white;
+	padding: 2px 5px;
+	text-align: center;
+	margin-bottom: 0px;
+	border-bottom: none;
+}
+
+header ul li a {
+	margin: 0px;
+}
+
+header ul li:first-of-type {
+	padding-top: 20px;
+}
+
+
 header input {
 	margin-bottom: 0px;
 	color: black;

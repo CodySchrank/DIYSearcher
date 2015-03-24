@@ -15,6 +15,12 @@
 
 	<a href="/checkout" id="checkout"></a>
 
-	<a href="/profile" id="profile"></a>
+	<button id="profile">
+	<ul>
+		<li><a href="/signin">Sign In</a></li>
+		<li><a href="/register">Register</a></li>
+		<li><a href="/diy">Create DIY</a></li>
+	</ul>
+	</button>
 	</div>
 </header>
