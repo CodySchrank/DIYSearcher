@@ -30,19 +30,35 @@
 			<span>$</span><span class="light-dollar">$$$</span>
 			<span >Overall Rating:</span> <span class="bold">10/10</span>
 		</div>
-		<div class="row">
+		<div class="row kit-video">
 			<div class="six columns">
 				<embed class="video" src="http://www.youtube.com/v/fqQz_CBQKhw" type="application/x-shockwave-flash" wmode="transparent">
 			</div>
-			<div class="six columns">
-				<h3>Buy A VHS video toaster kit</h3>
-				<ul class="kit-items">
-					<li>Old VCR</li>
-					<li>Cords</li>
-					<li>dust</li>
-					<li>candy</li>
-				</ul>
-
+			<div class="six columns kit-buy">
+			<h4>Buy A VHS video toaster kit</h4>
+				<div class="half-buy">
+					<ul class="kit-items">
+					<span class="bold"> Includes:</span>
+						<li>Old VCR</li>
+						<li>Cords</li>
+						<li>dust</li>
+						<li>candy</li>
+							<li>Cords</li>
+						<li>dust</li>
+						<li>candy</li>
+					</ul>
+				</div>
+				<div class="half-buy">
+					<span class="bold"> Price:</span><h6>$19.99</h6>
+					<form class="purchase-kit" action="/DIYS/BUY" method="POST">
+						<select class="buy" name="quantity">
+							<option value="1">1 Kit</option>
+							<option value="2">2 Kits</option>
+							<option value="3">3 Kits</option>
+						</select>
+						<input class="button-primary buy" type="submit" value="Buy">
+					</form>
+				</div>
 			</div>
 		</div>
 

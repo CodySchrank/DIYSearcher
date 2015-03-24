@@ -111,18 +111,41 @@ h6 a:hover {
 /*KIT/VIDEO*/
 
 .video {
-
 	width: 100%;
 	height: 100%;
-	min-height: 250px;
+	min-height: 300px;
+	padding-top: 4%;
 }
-
 
 .kit-items  {
 	list-style-type: none;
+	padding-bottom: 0px;
 }
 
 .kit-items li  {
 	padding:0px;
 	margin:0px;
+	padding-bottom: 0px;
+}
+
+.kit-buy {
+	padding: 2% 2% 0 2%;
+	background-color: pink;
+	border-radius: 5px;
+	margin-top: 2%;
+}
+
+.buy {
+	width: 90%;
+}
+
+.half-buy {
+	padding-left: 5%;
+	width: 43%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+h4 {
+	padding-left: 4%;
 }
