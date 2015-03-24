@@ -17,5 +17,10 @@
 			$(this).css('visibility', 'hidden');
 		});
 		
+		$('#profile').hover(function(){
+			$(this).children().show();
+		},function(){
+			$(this).children().hide();
+		});
 	});
 </script>
