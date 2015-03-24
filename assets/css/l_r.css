@@ -1,0 +1,11 @@
+.container {
+	text-align: center;
+}
+
+.container .row {
+	display: inline-block;
+	text-align: left;
+	margin-top: 20px;
+}
+
+

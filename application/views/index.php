@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<? require('partials/head.php') ?>
-<link rel="stylesheet" type="text/css" href="/assets/css/index.css">
+	<? require('partials/head.php') ?>
+	<link rel="stylesheet" type="text/css" href="/assets/css/index.css">
 </head>
 <body>
 	<? require('partials/header_index.php') ?>
