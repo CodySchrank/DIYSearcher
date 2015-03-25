@@ -13,9 +13,18 @@
 
 	<button id="profile">
 	<ul style="display: none">
+<<<<<<< HEAD
 	<?
 		if($this->session->userdata('logged_in') == TRUE) {
 	?>
+=======
+		<?
+		if($this->session->userdata('logged_in') == TRUE) {
+			if($this->session->userdata['user']['permission'] == 9) {
+				echo '<li><a href="/dashboard">Dashboard</a></li>';
+			}
+		?>
+>>>>>>> 06e2ffedb831a2ee6efe7d936e39a2958356303c
 		<li><a href="/profile">Profile</a></li>
 		<li><a href="/DIYS/logoff">Log Out</a></li>
 	<?

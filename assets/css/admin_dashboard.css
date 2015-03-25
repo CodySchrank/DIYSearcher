@@ -1,0 +1,15 @@
+.container .row {
+	margin-top: 15px;
+}
+
+.container a button {
+	display: block;
+}
+
+.container a {
+	text-decoration: none;
+}
+
+#last {
+	padding-left: 100px;
+}
