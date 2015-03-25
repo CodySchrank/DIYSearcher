@@ -6,7 +6,7 @@ class DIYS extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('DIY');
-		// $this->output->enable_profiler();
+		$this->output->enable_profiler();
 	}
 
 	public function index() {
@@ -65,6 +65,7 @@ class DIYS extends CI_Controller {
 	// { 
 	// 	$this->load->view("add_project3");
 	// }
+
 	public function login_page() {
 		$this->load->view('login');
 	}
@@ -84,9 +85,9 @@ class DIYS extends CI_Controller {
 	public function add_kit() {
 		if($this->input->post()) {
 			if($this->DIY->add_kit($this->input->post())) {
-				//true
+				redirect('/dashboard');
 			} else {
-				//false
+				redirect('/add_kit');
 			}
 		} else {
 			redirect('/add_kit');
@@ -95,7 +96,8 @@ class DIYS extends CI_Controller {
 
 	public function dashboard_info($location) {
 		if($location == "orders") {
-			return $this->load->view('partials/admin/p-orders.php');
+			$data['orders'] = $this->DIY->get_all_orders();
+			return $this->load->view('partials/admin/p-orders.php', $data);
 		} else if($location == "kits") {
 			return $this->load->view('partials/admin/p-kits.php');
 		} else if($location == "projects") {

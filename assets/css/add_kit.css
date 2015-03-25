@@ -1,0 +1,4 @@
+form .error {
+	border: 1px solid red;
+	box-shadow: 0 0 3px maroon;
+}

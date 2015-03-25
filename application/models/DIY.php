@@ -102,6 +102,9 @@ Class DIY extends CI_Model {
 		}		
 		return FALSE;
 	}
+
+	
+
 	// public function projectbasicinfo($post)
 	// {
 	// 		$config1 = array(
@@ -171,6 +174,7 @@ Class DIY extends CI_Model {
 		// 	{
 		// 		//DO THIS EVENTUALLY $errors[] = array('error' => $this->upload->display_errors());
 	
+
 	public function add_kit($post) {
 		if(!empty($post['name'])) {
 			$name = $post['name'];
@@ -195,7 +199,8 @@ Class DIY extends CI_Model {
 			return FALSE;
 		} else {
 			$query = "INSERT INTO kits (name,price,description,created_at) VALUES (?,?,?,NOW())";
-			$values = array();
+			$values = array("$name", "$price", "$description");
+			return $this->db->query($query, $values);
 		}
 
 	}
