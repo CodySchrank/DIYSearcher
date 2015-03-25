@@ -37,7 +37,7 @@
 	</div>
 	<div class="one-half column" id="last">
 		<h3>Admin Stuff</h3>
-		<a href="/DIYS/add_kit"><button>Add Kit</button></a>
+		<a href="/add_kit"><button>Add Kit</button></a>
 		<a href="/DIYS/add_project"><button>Add Project</button></a>
 		<a href="/DIYS/add_user"><button>Add User</button></a>
 	</div>

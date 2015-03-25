@@ -102,4 +102,46 @@ Class DIY extends CI_Model {
 		}		
 		return FALSE;
 	}
+
+	public function add_kit($post) {
+		if(!empty($post['name'])) {
+			$name = $post['name'];
+		} else {
+			$errors[] = "name";
+		}
+
+		if(!empty($post['description'])) {
+			$description = $post['description'];
+		} else {
+			$errors[] = "description";
+		}
+
+		if(!empty($post['price'])) {
+			$price = $post['price'];
+		} else {
+			$errors[] = "price";
+		}		
+
+		if(!empty($errors)) {
+			$this->session->set_flashdata('errors', $errors);
+			return FALSE;
+		} else {
+			$query = "INSERT INTO kits (name,price,description,created_at) VALUES (?,?,?,NOW())";
+			$values = array()
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
