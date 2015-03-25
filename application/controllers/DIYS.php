@@ -27,6 +27,10 @@ class DIYS extends CI_Controller {
 	{ 
 		$this->load->view("add_project1");
 	}
+		public function add_basicproject()
+		{
+			$this->DIY->projectbasicinfo($this->input->post());  
+		}
 
 	public function add_project2()
 	{ 
@@ -66,6 +70,12 @@ class DIYS extends CI_Controller {
 		} else {
 			redirect('/login');
 		}
+	}
+
+	public function logoff(){
+		$this->session->unset_userdata('user');
+		$this->session->unset_userdata('logged_in');
+		redirect('/');
 	}
 }
 

@@ -38,7 +38,7 @@ if($this->session->userdata('user')) {
 			echo "<p>".$this->session->flashdata('unique_registration_errors')."</p>";
 		}
 	?>
-	<form action="/DIYS/register" method="post">
+	<form action="/DIYS/register" method="post" enctype="multipart/form-data">
 		<div>
 			<label>First Name:</label>
 			<input type="text" name="first_name">
@@ -58,6 +58,10 @@ if($this->session->userdata('user')) {
 		<div>
 			<label>Confirm:</label>
 			<input type="password" name="confirm">
+		</div>
+		<div>
+			<label>Profile Picture:</label>
+			 <input type="file" name="userfile" multiple="multiple">
 		</div>
 		<input type="submit" class="button-primary" value="Register">
 	</form>
