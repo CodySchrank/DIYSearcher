@@ -3,6 +3,7 @@
 $route['default_controller'] = "DIYS";
 $route['login'] = 'DIYS/login_page';
 $route['register'] = "DIYS/register_page";
+$route['browse'] = 'DIYS/browse';
 $route['404_override'] = '';
 
 //end of routes.php

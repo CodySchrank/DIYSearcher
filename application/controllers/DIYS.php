@@ -6,7 +6,7 @@ class DIYS extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('DIY');
-		// $this->output->enable_profiler();
+		$this->output->enable_profiler();
 	}
 
 	public function index() {
@@ -33,7 +33,25 @@ class DIYS extends CI_Controller {
 
 	public function register() {
 		if($this->input->post()) {
+			if($this->DIY->register($this->input->post())) {
+				redirect('/login');
+			} else {
+				redirect('/register');
+			}
+		} else {
+			redirect('/register');
+		}
+	}
 
+	public function login(){
+		if($this->input->post()) {
+			if($this->DIY->login($this->input->post())) {
+				redirect('/browse');
+			} else {
+				redirect('/login');
+			}
+		} else {
+			redirect('/login');
 		}
 	}
 }
