@@ -15,9 +15,6 @@
 	<ul style="display: none">
 	<?
 		if($this->session->userdata('logged_in') == TRUE) {
-	?>
-		<?
-		if($this->session->userdata('logged_in') == TRUE) {
 			if($this->session->userdata['user']['permission'] == 9) {
 				echo '<li><a href="/dashboard">Dashboard</a></li>';
 			}

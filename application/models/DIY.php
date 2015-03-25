@@ -170,6 +170,7 @@ Class DIY extends CI_Model {
 		// 	else 
 		// 	{
 		// 		//DO THIS EVENTUALLY $errors[] = array('error' => $this->upload->display_errors());
+	
 	public function add_kit($post) {
 		if(!empty($post['name'])) {
 			$name = $post['name'];
@@ -194,7 +195,7 @@ Class DIY extends CI_Model {
 			return FALSE;
 		} else {
 			$query = "INSERT INTO kits (name,price,description,created_at) VALUES (?,?,?,NOW())";
-			$values = array()
+			$values = array();
 		}
 
 	}
@@ -218,6 +219,7 @@ Class DIY extends CI_Model {
 			$image = "/assets/pics/uploads/";
 			$image .= $data['upload_data']['file_name'];
 		}
+	}
 		// DO THIS LOGIC 
 		// else {
 		// 	if(empty($_FILES['userfile']['name'])) {
