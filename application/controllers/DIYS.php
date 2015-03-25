@@ -25,18 +25,43 @@ class DIYS extends CI_Controller {
 
 	public function BUY()
 	{
+		
+		// $this->session->unset_userdata("cart_total");
+		// die();
+		if(empty($this->session->userdata("cart_total")))
+		{
+			$this->session->set_userdata("cart_total", $this->input->post("quantity"));
+		}
+		else
+		{
+			$cart_update = $this->session->userdata("cart_total");
+			$cart_update += $this->input->post("quantity");
+			$this->session->set_userdata("cart_total" , $cart_update);
+		}
+
 		if(empty($this->session->userdata("cart")))
 		{
 			$purchase = array();
 			$purchase[] = $this->input->post();
 			$this->session->set_userdata("cart", $purchase);
-			var_dump($this->session->userdata());
-			die();
 		}
 		else
-		{	
-			$purchase [] =$this->session->set_userdata("cart");
+		{
+			foreach ($this->session->userdata("cart") as $key => $value) 
+			{
+				if($value["kit_id"] == $this->input->post("kit_id"))
+				{
+					$purchase_array = $this->session->userdata("cart");
+					$purchase_array[$key]["quantity"] += $this->input->post("quantity");
+					$this->session->set_userdata("cart", $purchase_array);
+					redirect("/DIYS/project");
+				}
+			}
+					$purchase_array = $this->session->userdata("cart");
+					$purchase_array [] = $this->input->post();
+					$this->session->set_userdata("cart", $purchase_array);
 		}
+		redirect("/DIYS/project");
 	}
 
 	// public function add_project1()

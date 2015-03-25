@@ -13,7 +13,12 @@
 		<a id="search"></a>
 	</form>
 
-	<a href="/checkout" id="checkout"></a>
+	<a href="/checkout" id="checkout"><? 
+	if(!empty($this->session->userdata("cart_total")))
+		{
+			echo $this->session->userdata("cart_total");
+		}
+?></a>
 
 	<button id="profile">
 	<ul style="display: none">
