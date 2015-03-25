@@ -77,6 +77,22 @@ class DIYS extends CI_Controller {
 		$this->load->view('admin_dashboard');
 	}
 
+	public function add_kit_page() {
+		$this->load->view('add_kit');
+	}
+
+	public function add_kit() {
+		if($this->input->post()) {
+			if($this->DIY->add_kit($this->input->post())) {
+				//true
+			} else {
+				//false
+			}
+		} else {
+			redirect('/add_kit');
+		}
+	}
+
 	public function dashboard_info($location) {
 		if($location == "orders") {
 			return $this->load->view('partials/admin/p-orders.php');

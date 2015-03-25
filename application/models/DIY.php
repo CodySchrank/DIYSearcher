@@ -102,7 +102,6 @@ Class DIY extends CI_Model {
 		}		
 		return FALSE;
 	}
-
 	// public function projectbasicinfo($post)
 	// {
 	// 		$config1 = array(
@@ -171,6 +170,61 @@ Class DIY extends CI_Model {
 		// 	else 
 		// 	{
 		// 		//DO THIS EVENTUALLY $errors[] = array('error' => $this->upload->display_errors());
+	public function add_kit($post) {
+		if(!empty($post['name'])) {
+			$name = $post['name'];
+		} else {
+			$errors[] = "name";
+		}
+
+		if(!empty($post['description'])) {
+			$description = $post['description'];
+		} else {
+			$errors[] = "description";
+		}
+
+		if(!empty($post['price'])) {
+			$price = $post['price'];
+		} else {
+			$errors[] = "price";
+		}		
+
+		if(!empty($errors)) {
+			$this->session->set_flashdata('errors', $errors);
+			return FALSE;
+		} else {
+			$query = "INSERT INTO kits (name,price,description,created_at) VALUES (?,?,?,NOW())";
+			$values = array()
+		}
+
+	}
+
+	public function projectbasicinfo($post)
+	{
+			$config1 = array(
+			'upload_path' => "./assets/pics/uploads/",
+			'allowed_types' => "gif|jpg|png",
+			'overwrite' => TRUE,
+			'max_size' => "2048000" // in bytes
+		);
+
+		// INSERT LOGIC FOR IF THINGS DON"T EXIST
+
+		$this->load->library('upload', $config1);
+
+		if($this->upload->do_upload()) {
+			$data = array('upload_data' => $this->upload->data());
+			// -------- MIGHT BREAK IN DEVELOPMENT BCUZ PERMISSIONS --------
+			$image = "/assets/pics/uploads/";
+			$image .= $data['upload_data']['file_name'];
+		}
+		// DO THIS LOGIC 
+		// else {
+		// 	if(empty($_FILES['userfile']['name'])) {
+		// 		$image = "/assets/pics/uploads/default-profile.png";
+		// 	} else {
+		// 		$errors[] = array('error' => $this->upload->display_errors());
+		// 	}
 		// }
 		// }	
 	// }
