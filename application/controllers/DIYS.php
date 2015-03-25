@@ -6,7 +6,7 @@ class DIYS extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('DIY');
-		$this->output->enable_profiler();
+		// $this->output->enable_profiler();
 	}
 
 	public function index() {
@@ -39,6 +39,22 @@ class DIYS extends CI_Controller {
 
 	public function register_page() {
 		$this->load->view('register');
+	}
+
+	public function admin_dashboard() {
+		$this->load->view('admin_dashboard');
+	}
+
+	public function dashboard_info($location) {
+		if($location == "orders") {
+			return $this->load->view('partials/admin/p-orders.php');
+		} else if($location == "kits") {
+			return $this->load->view('partials/admin/p-kits.php');
+		} else if($location == "projects") {
+			return $this->load->view('partials/admin/p-projects.php');
+		} else {
+			die('SOMETHING WENT WRONG');
+		}
 	}
 
 	public function register() {
