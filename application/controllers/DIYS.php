@@ -23,6 +23,16 @@ class DIYS extends CI_Controller {
 		$this->load->view('project');
 	}
 
+	public function add_project1()
+	{ 
+		$this->load->view("add_project1");
+	}
+
+	public function add_project2()
+	{ 
+		$this->load->view("add_project2");
+	}
+
 	public function login_page() {
 		$this->load->view('login');
 	}

@@ -102,5 +102,4 @@ Class DIY extends CI_Model {
 		}		
 		return FALSE;
 	}
-
 }

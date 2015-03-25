@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DIY SEARCHER</title>
+<link rel="stylesheet" type="text/css" href="/assets/css/skeleton/normalize.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/skeleton/skeleton.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/h_f.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$('#search').hover(function(){
+			$(this).prev().css('visibility', 'visible').focus();
+		},function(){
+			console.log('lost focus');
+		}).click(function(){
+			$.post($(this).parent().attr('action'),$(this).parent().serialize());
+		}).prev().focusout(function(){
+			$(this).css('visibility', 'hidden');
+		});
+		
+		$('#profile').hover(function(){
+			$(this).children().show();
+		},function(){
+			$(this).children().hide();
+		});
+	});
+</script>
+	<title></title>
+</head>
+<body>
+	<header class="row">
+	
+	<h2>DIYSearcher</h2>
+
+	<a href="/popular">Popular</a>
+
+	<a href="/browse/all">Browse All</a>
+
+	<a href="/browse/new">New Postings</a>
+	<div>
+	<form action="/search" method="post">
+		<input type="text" name="search">
+		<a id="search"></a>
+	</form>
+
+	<a href="/checkout" id="checkout"></a>
+
+	<button id="profile">
+	<ul style="display: none">
+		<li><a href="/signin">Sign In</a></li>
+		<li><a href="/register">Register</a></li>
+		<li><a href="/diy">Create DIY</a></li>
+	</ul>
+	</button>
+	</div>
+</header>	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<form>
+					<input name="title" placeholder="project title" />
+ 				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
