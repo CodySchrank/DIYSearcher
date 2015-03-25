@@ -67,7 +67,7 @@
 	    	</div>
 	    </div> 	
 		<div class="row">
-			<input type="hidden" value="$this->session->userdata('id')" name="user_id">
+			<input type="hidden" value="<?= $this->session->userdata('id')?>" name="user_id">
 		    <input class="button-primary" type="submit" value="Submit">
 		</div>
 	</form>

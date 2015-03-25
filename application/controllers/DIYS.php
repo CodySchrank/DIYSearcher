@@ -23,23 +23,48 @@ class DIYS extends CI_Controller {
 		$this->load->view('project');
 	}
 
-	public function add_project1()
-	{ 
-		$this->load->view("add_project1");
-	}
-		public function add_basicproject()
+	public function BUY()
+	{
+		if(empty($this->session->userdata("cart")))
 		{
-			$this->DIY->projectbasicinfo($this->input->post());  
+			$purchase = array();
+			$purchase[] = $this->input->post();
+			$this->session->set_userdata("cart", $purchase);
+			var_dump($this->session->userdata());
+			die();
 		}
+		else
+		{	
+			$purchase [] =$this->session->set_userdata("cart");
+		}
+	}
 
-	public function add_project2()
-	{ 
-		$this->load->view("add_project2");
-	}
-	public function add_project3()
-	{ 
-		$this->load->view("add_project3");
-	}
+	// public function add_project1()
+	// { 
+	// 	$this->load->view("add_project1");
+	// }
+	// 	public function add_basicproject()
+	// 	{
+	// 		$this->DIY->projectbasicinfo($this->input->post());
+	// 		redirect("/DIYS/add_project2");
+	// 	}
+
+	// public function add_project2()
+	// { 
+	// 	$this->load->view("add_project2");
+	// }
+	// 	public function add_step_partial()
+	// 	{
+	// 		$this->load->view("/partials/add_step");
+	// 	}
+	// 	public function add_basicsteps()
+	// 	{
+	// 		$this->DIY->add_basicsteps($this->input->post());
+	// 	}
+	// public function add_project3()
+	// { 
+	// 	$this->load->view("add_project3");
+	// }
 	public function login_page() {
 		$this->load->view('login');
 	}
