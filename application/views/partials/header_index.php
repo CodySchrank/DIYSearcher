@@ -13,9 +13,18 @@
 
 	<button id="profile">
 	<ul style="display: none">
+	<?
+		if($this->session->userdata('logged_in') == TRUE) {
+	?>
+		<li><a href="/profile">Profile</a></li>
+		<li><a href="/DIYS/logoff">Log Out</a></li>
+	<?
+	} else {
+	?>
 		<li><a href="/login">Sign In</a></li>
 		<li><a href="/register">Register</a></li>
 		<li><a href="/diy">Create DIY</a></li>
+	<? } ?>
 	</ul>
 	</button>
 	</div>

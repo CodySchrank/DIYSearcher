@@ -54,6 +54,12 @@ class DIYS extends CI_Controller {
 			redirect('/login');
 		}
 	}
+
+	public function logoff(){
+		$this->session->unset_userdata('user');
+		$this->session->unset_userdata('logged_in');
+		redirect('/');
+	}
 }
 
 //end of main controller
