@@ -1,3 +1,42 @@
+.progress-holder {
+	text-align: center;
+	margin-top: 3%;
+}
+.progress {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px; 
+	background-color: lightgray;
+	text-align: center;
+	margin: auto;
+	display: inline-block;
+	color: white;
+	line-height: 60px;
+
+}
+
+.progress-selected {
+	background-color: #33C3F0;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px; 
+	text-align: center;
+	margin: auto;
+	display: inline-block;
+	color: white;
+	line-height: 60px;
+}
+
+.middle {
+			margin-left: 5%;
+}
+
+.right {
+			margin-left: 5%;
+}
+
+
+
 form {
 	margin-top: 3%;
 }

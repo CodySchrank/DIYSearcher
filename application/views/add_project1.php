@@ -7,6 +7,13 @@
 <body>
 	<?php require("partials/header.php") ?>
 <div class="container">
+	<div class="row">
+		<div class="twelve columns progress-holder">
+			<div class="progress-selected">1</div>
+			<div class="progress middle">2</div>
+			<div class="progress right">3</div>	
+		</div>
+	</div>
 	<form enctype="multipart/form-data">
 		  <div class="row">
 		    <div class="six columns">
