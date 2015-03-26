@@ -103,7 +103,7 @@ Class DIY extends CI_Model {
 		return FALSE;
 	}
 
-	
+
 
 	// public function projectbasicinfo($post)
 	// {
@@ -203,6 +203,22 @@ Class DIY extends CI_Model {
 			return $this->db->query($query, $values);
 		}
 
+	}
+
+	public function get_all_orders(){
+		$query =   "SELECT cart.id, users.first_name, users.last_name, users.email, kits.name, 
+					kits.price, cart.quantity, shipping_addresses.street,shipping_addresses.city, 
+					shipping_addresses.zip_code, shipping_addresses.state, orders.created_at, orders.status
+					FROM cart
+					LEFT JOIN orders ON cart.order_id = orders.id
+					LEFT JOIN users ON orders.user_id = users.id
+					LEFT JOIN kits ON cart.kit_id = kits.id
+					LEFT JOIN shipping_addresses ON orders.address_id = shipping_addresses.id";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function get_all_kits() {
+		
 	}
 
 	public function projectbasicinfo($post)

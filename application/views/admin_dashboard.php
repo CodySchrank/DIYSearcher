@@ -25,7 +25,6 @@
 <? require('partials/header.php') ?>
 <div class="container">
 	<div class="row">
-	<div class="one-half column">
 		<h2>Admin Dashboard</h2>
 		<form>
 			<button formaction="/DIYS/dashboard_info/orders">Orders</button>
@@ -35,12 +34,11 @@
 		<div id="results">
 		</div>
 	</div>
-	<div class="one-half column" id="last">
+	<div class="row" id="last">
 		<h3>Admin Stuff</h3>
 		<a href="/add_kit"><button>Add Kit</button></a>
 		<a href="/DIYS/add_project"><button>Add Project</button></a>
 		<a href="/DIYS/add_user"><button>Add User</button></a>
-	</div>
 	</div>
 </div>
 <? // require('partials/footer.php') ?>

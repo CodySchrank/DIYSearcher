@@ -6,7 +6,7 @@ class DIYS extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('DIY');
-		$this->output->enable_profiler();
+		// $this->output->enable_profiler();
 	}
 
 	public function index() {

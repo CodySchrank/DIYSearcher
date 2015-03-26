@@ -2,30 +2,28 @@
 <table>
 	<thead>
 		<tr>
-			<th>ID</th>
-			<th>User ID</th>
-			<th>Address ID</th>
-			<th>Cart ID</th>
+		<?
+			$titles = array_keys($orders[0]);
+			foreach ($titles as $title) {
+				echo "<th>".$title."</th>";
+			}
+		?>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-		</tr>
-				<tr>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-		</tr>
-				<tr>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-			<td>1</td>
-		</tr>
+	<?
+		foreach ($orders as $order) {
+			echo "<tr>";
+			foreach ($order as $item) {
+				echo "<td>".$item."</td>";
+			}
+			echo "</tr>";
+		}
+	?>
+	<script type="text/javascript">
+			$('tbody').children().find('td:contains("Not Shipped")').replaceWith(
+				'<td><select><option>Not Shipped</option><option>Shipped</option></select></td>'
+				);
+	</script>
 	</tbody>
 </table>
