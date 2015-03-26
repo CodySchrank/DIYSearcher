@@ -205,7 +205,7 @@ Class DIY extends CI_Model {
 
 
 	public function get_all_orders(){
-		$query =   "SELECT cart.id, users.first_name, users.last_name, users.email, kits.name, 
+		$query =   "SELECT users.first_name, users.last_name, users.email, kits.name, 
 					kits.price, cart.quantity, shipping_addresses.street,shipping_addresses.city, 
 					shipping_addresses.zip_code, shipping_addresses.state, orders.created_at, orders.status
 					FROM cart
