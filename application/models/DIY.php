@@ -252,42 +252,23 @@ Class DIY extends CI_Model {
 
 	public function add_order($data)
 	{
-		$query = 'INSERT INTO addresses (street, city, zip_code, state) VALUES (?,?,?,?)';
+		$query = 'INSERT INTO shipping_addresses (street, city, zip_code, state) VALUES (?,?,?,?)';
 		$values = array($data["address"], $data["city"], $data["zip"], $data["state"]);
 		$this->db->query($query, $values);
 		$address = $data['address'];
 		$city = $data["city"];
 		$zip = $data["zip"];
-	$get_address_id = $this->db->query("SELECT id FROM addresses WHERE street = '$address' AND city = '$city' AND zip_code = '$zip'")->result_array();
+		$address_id = $this->db->query("SELECT LAST_INSERT_ID()")->row_array();
 		$query2 = "INSERT INTO orders (user_id, address_id, created_at) VALUES (?,?,?)";
-		$values2 = array($this->session->userdata("user")["id"], $get_address_id[0]["id"], date("Y-m-d H:i:s"));
+		$values2 = array($this->session->userdata("user")["id"], $address_id['LAST_INSERT_ID()'], date("Y-m-d H:i:s"));
 		$this->db->query($query2, $values2);
-		$address_id_is = $get_address_id[0]["id"];
-		$user_query = $this->session->userdata("user")["id"];
-	$get_order_id = $this->db->query("SELECT id FROM orders WHERE address_id = '$address_id_is' AND user_id = '$user_query '")->result_array();
-		$order_id_is = $get_order_id[0]["id"];
+		$order_id = $this->db->query("SELECT LAST_INSERT_ID()")->row_array();
 		foreach ($this->session->userdata("cart") as $key => $value) 
 		{
-			$query3 = "INSERT INTO carts (order_id, kit_id, quantity) VALUES (?,?,?)";
-			$values3 = array($order_id_is, $value["kit_id"], $value["quantity"]);
+
+			$query3 = "INSERT INTO cart (order_id, kit_id, quantity) VALUES (?,?,?)";
+			$values3 = array($order_id["LAST_INSERT_ID()"], $value["kit_id"], $value["quantity"]);
 			$this->db->query($query3, $values3);
 		}
-		
-		// $query1 = 'INSERT INTO '
-		// $data[]
-		// var_dump($data);
-		// var_dump($this->session->userdata("cart"));
-		// var_dump($this->session->userdata("user")["id"]);
-		// die();
 	}
-		// DO THIS LOGIC 
-		// else {
-		// 	if(empty($_FILES['userfile']['name'])) {
-		// 		$image = "/assets/pics/uploads/default-profile.png";
-		// 	} else {
-		// 		$errors[] = array('error' => $this->upload->display_errors());
-		// 	}
-		// }
-		// }	
-	// }
 }
