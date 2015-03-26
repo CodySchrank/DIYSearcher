@@ -51,7 +51,7 @@
 				<div class="half-buy">
 					<span class="bold"> Price:</span><h6>$19.99</h6>
 					<form class="purchase-kit" action="/DIYS/BUY" method="POST">
-					<input type="hidden" name="kit_id" value="3">
+					<input type="hidden" name="kit_id" value="1">
 						<select class="buy" name="quantity">
 							<option value="1">1 Kit</option>
 							<option value="2">2 Kits</option>
