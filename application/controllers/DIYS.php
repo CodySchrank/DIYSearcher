@@ -6,7 +6,7 @@ class DIYS extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('DIY');
-		// $this->output->enable_profiler();
+		$this->output->enable_profiler();
 	}
 
 	public function index() {
@@ -25,9 +25,6 @@ class DIYS extends CI_Controller {
 
 	public function BUY()
 	{
-		
-		// $this->session->unset_userdata("cart_total");
-		// die();
 		if(empty($this->session->userdata("cart_total")))
 		{
 			$this->session->set_userdata("cart_total", $this->input->post("quantity"));
@@ -81,6 +78,12 @@ class DIYS extends CI_Controller {
 		unset($temp[$kid]);
 		$this->session->set_userdata("cart", $temp);
 		redirect("/DIYS/cart");
+	}
+
+	public function done()
+	{
+
+		$this->DIY->add_order($this->input->post());
 	}
 
 	public function edit_cart_quantity()

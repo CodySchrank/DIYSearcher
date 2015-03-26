@@ -109,13 +109,16 @@ else
 ?>
   </tbody>
 </table>
-Total:
-$<?= $total  ?>
-<a href="/DIYS/browse" class="button">Back to Browsing</a>
- 	</div>
+</div>
+	<div class="row"> 
+		<div class="u-pull-right">Total:$<?= $total?>
+		</div>
+	</div>
+	<div class="row"> 
+		<a href="/DIYS/browse" class="button u-pull-right">Back to Browsing</a>
+	</div>
  	<div class="row">
-
- 		<form>
+ 		<form method="POST" action="/DIYS/done">
  			<div class="six columns">
  		 		<h4>Shipping Info</h4>
 	 			<label for="first_name">First Name:</label>
@@ -146,8 +149,22 @@ $<?= $total  ?>
 	 			<input class="u-full-width"  type="text" name="bstate">
 	 			<label class="u-full-width"  for="first_name">Zip Code:</label>
 	 			<input class="u-full-width"  type="text" name="bzip">
+	 		<h4>Credit Card Info</h4>
+	 			<label for="cc">Credit Card Number:</label>
+	 			<input class="u-full-width"  type="text" name="cc">
+	 			<label for="security">Security Code:</label>
+	 			<input class="u-full-width"  type="text" name="security">
+	 			<label for="month">Expiration Month:</label>
+	 			<input class="u-full-width"  type="text" name="month">
+	 			<label for="year">Expiration Year:</label>
+	 			<input class="u-full-width"  type="text" name="year">
+	 		</div>
+	 	
+	 	<div class="row">
+	 		<div class="twelve rows">
+	 			<input type="submit" value="PURCHASE" class="u-full-width button-primary button">
 	 		</div>
 	 	</form>
-	 	<div class="u-full-width"></div>
+	 	</div>
  	</div>
  </div>
