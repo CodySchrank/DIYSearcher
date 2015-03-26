@@ -103,8 +103,6 @@ Class DIY extends CI_Model {
 		return FALSE;
 	}
 
-
-
 	// public function projectbasicinfo($post)
 	// {
 	// 		$config1 = array(
@@ -222,7 +220,7 @@ Class DIY extends CI_Model {
 		$query = "SELECT id,name,price,description,created_at FROM kits";
 		return $this->db->query($query)->result_array();
 	}
-	
+
 	public function get_kitinfo($data)
 	{
 		$results =  $this->db->query("SELECT * FROM kits WHERE id = $data")->result_array();
