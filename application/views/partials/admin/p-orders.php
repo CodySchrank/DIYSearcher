@@ -21,9 +21,12 @@
 		}
 	?>
 	<script type="text/javascript">
+			$('tbody').children().find('td:contains("Shipped")').replaceWith(
+			'<td><select><option>Shipped</option><option>Not Shipped</option></select></td>'
+			);
 			$('tbody').children().find('td:contains("Not Shipped")').replaceWith(
 				'<td><select><option>Not Shipped</option><option>Shipped</option></select></td>'
-				);
+			);
 	</script>
 	</tbody>
 </table>

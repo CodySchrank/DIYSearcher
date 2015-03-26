@@ -13,3 +13,11 @@
 .container a {
 	text-decoration: none;
 }
+
+td a:first-child {
+	padding-left: 0px;
+}
+
+td a {
+	padding-left: 15px;
+}

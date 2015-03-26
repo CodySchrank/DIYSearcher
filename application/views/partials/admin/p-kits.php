@@ -2,30 +2,25 @@
 <table>
 	<thead>
 		<tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>Price</th>
-			<th>Description</th>
+		<?
+			$titles = array_keys($kits[0]);
+			foreach ($titles as $title) {
+				echo "<th>".$title."</th>";
+			}
+		?>
+		<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>1</td>
-			<td>Cats</td>
-			<td>19.99</td>
-			<td>Cats like LoL</td>
-		</tr>
-				<tr>
-			<td>1</td>
-			<td>Cats</td>
-			<td>19.99</td>
-			<td>Cats like LoL</td>
-		</tr>
-				<tr>
-			<td>1</td>
-			<td>Cats</td>
-			<td>19.99</td>
-			<td>Cats like LoL</td>
-		</tr>
+	<?
+		foreach ($kits as $kit) {
+			echo "<tr>";
+			foreach ($kit as $item) {
+				echo "<td>".$item."</td>";
+			}
+			echo "<td><a href='DIYS/edit_kit/{$kit["id"]}'>Edit</a><a href='DIYS/destroy_kit/{$kit["id"]}'>Delete</a>";
+			echo "</tr>";
+		}
+	?>
 	</tbody>
 </table>

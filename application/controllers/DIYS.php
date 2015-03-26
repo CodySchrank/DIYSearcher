@@ -124,7 +124,8 @@ class DIYS extends CI_Controller {
 			$data['orders'] = $this->DIY->get_all_orders();
 			return $this->load->view('partials/admin/p-orders.php', $data);
 		} else if($location == "kits") {
-			return $this->load->view('partials/admin/p-kits.php');
+			$data['kits'] = $this->DIY->get_all_kits();
+			return $this->load->view('partials/admin/p-kits.php', $data);
 		} else if($location == "projects") {
 			return $this->load->view('partials/admin/p-projects.php');
 		} else {
