@@ -200,6 +200,12 @@ Class DIY extends CI_Model {
 
 	}
 
+	public function get_kitinfo($data)
+	{
+		$results =  $this->db->query("SELECT * FROM kits WHERE id = $data")->result_array();
+		return $results;
+	}
+
 	public function projectbasicinfo($post)
 	{
 			$config1 = array(

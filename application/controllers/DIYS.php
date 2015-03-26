@@ -64,6 +64,69 @@ class DIYS extends CI_Controller {
 		redirect("/DIYS/project");
 	}
 
+	public function cart()
+	{
+		// $this->session->unset_userdata("cart");
+		// $this->session->unset_userdata("cart_total");
+		$this->load->view("cart");
+	}
+
+	public function remove_from_cart($kid)
+	{
+		$temp_cart = $this->session->userdata("cart_total");
+		$quantity_delete = $this->session->userdata("cart")[$kid]["quantity"];
+		$new_total_cart = $temp_cart - $quantity_delete;
+		$this->session->set_userdata("cart_total", $new_total_cart);
+		$temp = $this->session->userdata("cart");
+		unset($temp[$kid]);
+		$this->session->set_userdata("cart", $temp);
+		redirect("/DIYS/cart");
+	}
+
+	public function edit_cart_quantity()
+	{
+		// var_dump($this->input->post());
+		// die();
+		$kit = $this->input->post("kit_id");
+		$updated_quantity = $this->input->post("quantity_updated");
+		foreach ($this->session->userdata("cart") as $key => $value) 
+			{
+				if($value["kit_id"] == $kit)
+				{
+					$purchase_array = $this->session->userdata("cart");
+					// if($purchase_array[$key]["quantity"] > $updated_quantity) 
+					// {
+					// 	// SUBTRACT FROM TOTLA
+					// 	$temp_cart = $this->session->userdata("cart_total");
+					// 	$quantity_delete = $purchase_array[$key]["quantity"] - $updated_quantity;
+					// 	$new_total_cart = $temp_cart - $quantity_delete;
+					// 	$this->session->set_userdata("cart_total", $new_total_cart);
+					// }
+					// elseif($purchase_array[$key]["quantity"] < $updated_quantity) 
+					// {
+					// 	// ADD TO TOAL
+					// 	$temp_cart = $this->session->userdata("cart_total");
+					// 	$quantity_add = $purchase_array[$key]["quantity"] - $updated_quantity;
+					// 	$new_total_cart = $temp_cart + $quantity_add;
+					// 	$this->session->set_userdata("cart_total", $new_total_cart);
+					// }
+					$purchase_array[$key]["quantity"] = $updated_quantity;
+					$this->session->set_userdata("cart", $purchase_array);
+					$total = 0;
+					foreach ($this->session->userdata("cart") as $key => $value)
+					{ 
+						$total += $purchase_array[$key]["quantity"];
+					}
+					$this->session->set_userdata("cart_total", $total);
+
+					// redirect("/DIYS/project");
+				}
+		// $updated_quantity
+		// $this->session->set_userdata("cart_total", 'katkat');
+		// redirect("/DIYS/cart");
+			}
+	}
+
 	// public function add_project1()
 	// { 
 	// 	$this->load->view("add_project1");

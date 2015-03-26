@@ -13,7 +13,7 @@
 		<a id="search"></a>
 	</form>
 
-	<a href="/checkout" id="checkout"><? 
+	<a href="/DIYS/cart" id="checkout"><? 
 	if(!empty($this->session->userdata("cart_total")))
 		{
 			echo $this->session->userdata("cart_total");
