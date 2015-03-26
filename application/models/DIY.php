@@ -221,7 +221,8 @@ Class DIY extends CI_Model {
 	public function get_all_kits() {
 		$query = "SELECT id,name,price,description,created_at FROM kits";
 		return $this->db->query($query)->result_array();
-
+	}
+	
 	public function get_kitinfo($data)
 	{
 		$results =  $this->db->query("SELECT * FROM kits WHERE id = $data")->result_array();
