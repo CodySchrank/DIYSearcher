@@ -9,7 +9,12 @@
 	<a href="/browse/new">New Postings</a>
 	<div>
 
-	<a href="/checkout" id="checkout"></a>
+	<a href="/DIYS/cart" id="checkout"><? 
+	if(!empty($this->session->userdata("cart_total")))
+		{
+			echo $this->session->userdata("cart_total");
+		}
+?></a>
 
 	<button id="profile">
 	<ul style="display: none">

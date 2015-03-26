@@ -205,6 +205,7 @@ Class DIY extends CI_Model {
 
 	}
 
+
 	public function get_all_orders(){
 		$query =   "SELECT cart.id, users.first_name, users.last_name, users.email, kits.name, 
 					kits.price, cart.quantity, shipping_addresses.street,shipping_addresses.city, 
@@ -220,6 +221,11 @@ Class DIY extends CI_Model {
 	public function get_all_kits() {
 		$query = "SELECT id,name,price,description,created_at FROM kits";
 		return $this->db->query($query)->result_array();
+
+	public function get_kitinfo($data)
+	{
+		$results =  $this->db->query("SELECT * FROM kits WHERE id = $data")->result_array();
+		return $results;
 	}
 
 	public function projectbasicinfo($post)
