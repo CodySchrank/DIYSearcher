@@ -51,7 +51,7 @@ else
  ?>
     <tr>
       <td><?= $result[0]["name"] ?></td>
-      <td>$<?= $result[0]["prices"] ?></td>
+      <td>$<?= $result[0]["price"] ?></td>
       <td>
       <form method="POST" action="/DIYS/edit_cart_quantity">
       <input type="hidden" value="<?= $value["kit_id"] ?>" name="kit_id">
@@ -100,9 +100,9 @@ else
 
 
       <a href="/DIYS/remove_from_cart/<?= $key ?>">REMOVE</a></td>
-      <td>$<?= ($value["quantity"] * $result[0]["prices"]) ?></td>
+      <td>$<?= ($value["quantity"] * $result[0]["price"]) ?></td>
     </tr>
-<?php $total += ($value["quantity"] * $result[0]["prices"]);
+<?php $total += ($value["quantity"] * $result[0]["price"]);
 					}
 	}
 } 
